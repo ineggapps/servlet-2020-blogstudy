@@ -39,6 +39,10 @@ public class FormEx extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("doPost");
 		
+		
+		request.setCharacterEncoding("EUC-KR");//POST방식 한글 처리
+		
+		String name = request.getParameter("name");
 		String id = request.getParameter("id");
 		String pw = request.getParameter("pw");
 		
@@ -51,6 +55,7 @@ public class FormEx extends HttpServlet {
 		PrintWriter writer = response.getWriter();
 		
 		writer.println("<html><head></head><body>");
+		writer.println("이름: " + name+ "<br />");
 		writer.println("아이디: " + id + "<br />");
 		writer.println("비밀번호: " + pw + "<br />");
 		writer.println("취미: " + Arrays.toString(hobbys) + "<br />");

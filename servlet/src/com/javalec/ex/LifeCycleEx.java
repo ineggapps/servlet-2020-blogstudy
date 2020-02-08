@@ -1,6 +1,9 @@
 package com.javalec.ex;
 
 import java.io.IOException;
+
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -24,7 +27,7 @@ public class LifeCycleEx extends HttpServlet {
     }
 
     @Override
-    public void init() throws ServletException {
+    public void init() throws ServletException { 
     	// TODO Auto-generated method stub
     	System.out.println("init() 메서드가 호출됨");
     }
@@ -52,6 +55,16 @@ public class LifeCycleEx extends HttpServlet {
 		// TODO Auto-generated method stub
 		System.out.println("doPost  메서드랍니다");
 		doGet(request, response);
+	}
+	
+	@PostConstruct
+	private void initPostConstruct(){
+		System.out.println("init()메서드 실행 직전 실행되는 메서드");
+	}
+	
+	@PreDestroy
+	private void destroyPreDestroy() {
+		System.out.println("destroy()메서드가 호출되고 나서 실행되는 메서드");
 	}
 
 }

@@ -31,15 +31,7 @@ public class InitParam extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		System.out.println("IPÁ¢±Ù");
-
-		System.out.println(getServletContext());
-		String id = getServletContext().getInitParameter("name");
-		String pw = getServletContext().getInitParameter("code");
-		System.out.println("id: " + id);
-		System.out.println("pw:" + pw);
-
+		System.out.println("doGet");
 	}
 
 	/**

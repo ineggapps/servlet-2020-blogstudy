@@ -13,12 +13,7 @@
 		<welcome-file>default.jsp</welcome-file>
 	</welcome-file-list>
 
-	<context-param>
-		<param-name>name</param-name>
-		<param-value>abc</param-value>
-	</context-param>
-	<context-param>
-		<param-name>code</param-name>
-		<param-value>909090</param-value>
-	</context-param>
+	<listener>
+		<listener-class>com.javalec.ex.ServletL</listener-class>
+	</listener>
 </web-app>

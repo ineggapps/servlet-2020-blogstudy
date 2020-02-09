@@ -13,23 +13,12 @@
 		<welcome-file>default.jsp</welcome-file>
 	</welcome-file-list>
 
-	<servlet>
-		<servlet-name>InitParam</servlet-name>
-		<servlet-class>com.javalec.ex.InitParam</servlet-class>
-
-
-		<!--init-param>
-			<param-name>id</param-name>
-			<param-value>abcde</param-value>
-		</init-param>
-		<init-param>
-			<param-name>pw</param-name>
-			<param-value>12345</param-value>
-		</init-param-->
-
-	</servlet>
-	<!-- <servlet-mapping>
-		<servlet-name>InitParam</servlet-name>
-		<url-pattern>/IP</url-pattern>
-	</servlet-mapping> -->
+	<context-param>
+		<param-name>name</param-name>
+		<param-value>abc</param-value>
+	</context-param>
+	<context-param>
+		<param-name>code</param-name>
+		<param-value>909090</param-value>
+	</context-param>
 </web-app>

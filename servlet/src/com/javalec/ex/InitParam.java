@@ -12,36 +12,42 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class InitParam
  */
-@WebServlet(urlPatterns= {"/initP"}, initParams= {@WebInitParam(name="id",value="aaaaa"), @WebInitParam(name="pw",value="99999")})
+@WebServlet(urlPatterns = { "/initP" }, initParams = { @WebInitParam(name = "id", value = "aaaaa"),
+		@WebInitParam(name = "pw", value = "99999") })
 public class InitParam extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public InitParam() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
 
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#HttpServlet()
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public InitParam() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		System.out.println("IPÁ¢±Ù");
-		
-		String id = getInitParameter("id");
-		String pw = getInitParameter("pw");	
 
+		System.out.println(getServletContext());
+		String id = getServletContext().getInitParameter("name");
+		String pw = getServletContext().getInitParameter("code");
 		System.out.println("id: " + id);
-		System.out.println("pw:"+pw);
+		System.out.println("pw:" + pw);
+
 	}
 
 	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
 	}

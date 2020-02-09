@@ -18,18 +18,18 @@
 		<servlet-class>com.javalec.ex.InitParam</servlet-class>
 
 
-		<init-param>
+		<!--init-param>
 			<param-name>id</param-name>
 			<param-value>abcde</param-value>
 		</init-param>
 		<init-param>
 			<param-name>pw</param-name>
 			<param-value>12345</param-value>
-		</init-param>
+		</init-param-->
 
 	</servlet>
-	<servlet-mapping>
+	<!-- <servlet-mapping>
 		<servlet-name>InitParam</servlet-name>
 		<url-pattern>/IP</url-pattern>
-	</servlet-mapping>
+	</servlet-mapping> -->
 </web-app>

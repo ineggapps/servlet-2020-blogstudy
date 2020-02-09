@@ -1,7 +1,9 @@
 package com.javalec.ex;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebInitParam;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -10,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class InitParam
  */
-//@WebServlet("/initP")
+@WebServlet(urlPatterns= {"/initP"}, initParams= {@WebInitParam(name="id",value="aaaaa"), @WebInitParam(name="pw",value="99999")})
 public class InitParam extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -30,9 +32,9 @@ public class InitParam extends HttpServlet {
 		System.out.println("IPÁ¢±Ù");
 		
 		String id = getInitParameter("id");
-		String pw = getInitParameter("pw");
+		String pw = getInitParameter("pw");	
 
-		System.out.println("id:" + id);
+		System.out.println("id: " + id);
 		System.out.println("pw:"+pw);
 	}
 

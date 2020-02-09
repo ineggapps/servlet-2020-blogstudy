@@ -18,6 +18,11 @@
 		out.println("str = " + str + " <br/>");
 		out.println("sum = " + sum(1, 5) + " <br/>");
 	%>
+	
+	<!-- %=는 변수나 메서드 호출 결과의 값만을 출력할 때 사용-->
+	<%=i %><br />
+	<%=str %><br />
+	<%=sum(10,20) %><br />
 
 </body>
 </html>

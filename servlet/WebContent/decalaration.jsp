@@ -30,6 +30,8 @@
 		int[] iArr = { 10, 20, 30 };
 		out.println(Arrays.toString(iArr));
 	%>
-
+	
+	<!-- include page -->
+	<%@ include file="include.jsp" %>
 </body>
 </html>

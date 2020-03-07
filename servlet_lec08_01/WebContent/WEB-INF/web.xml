@@ -13,6 +13,21 @@
 		<welcome-file>default.jsp</welcome-file>
 	</welcome-file-list>
 
+	<context-param>
+		<param-name>theme</param-name>
+		<param-value>blue</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>global</param-name>
+		<param-value>korea</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>path</param-name>
+		<param-value>d:\develop\...</param-value>
+	</context-param>
+
 
 	<servlet>
 		<servlet-name>ServletInitParam</servlet-name>

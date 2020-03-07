@@ -41,6 +41,9 @@ public class FormEx extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+
+		request.setCharacterEncoding("EUC-KR");//POST방식에서 한글 처리하는 방식
+
 		System.out.println("doPost");
 		String id = request.getParameter("id");
 		String pw = request.getParameter("pw");

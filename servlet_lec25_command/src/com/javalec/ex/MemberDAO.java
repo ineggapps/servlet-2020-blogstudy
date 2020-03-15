@@ -237,7 +237,7 @@ public class MemberDAO {
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		MemberDTO dto;
-		String query = "select * from members;";
+		String query = "select * from members";
 
 		try {
 			connection = getConnection();

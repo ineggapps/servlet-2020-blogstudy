@@ -127,7 +127,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log." suffix=".txt"/>
 
-      <Context docBase="servlet_lec25_command_pattern" path="/servlet_lec25_command_pattern" reloadable="true" source="org.eclipse.jst.jee.server:servlet_lec25_command_pattern"/><Context docBase="servlet_lec25_command" path="/servlet_lec25_command" reloadable="true" source="org.eclipse.jst.jee.server:servlet_lec25_command"/></Host>
+      <Context docBase="servlet_lec25_command_pattern" path="/servlet_lec25_command_pattern" reloadable="true" source="org.eclipse.jst.jee.server:servlet_lec25_command_pattern"/><Context docBase="servlet_lec25_command" path="/servlet_lec25_command" reloadable="true" source="org.eclipse.jst.jee.server:servlet_lec25_command"/><Context docBase="servlet_lec26_02_dispatcher_redirect" path="/servlet_lec26_02_dispatcher_redirect" reloadable="true" source="org.eclipse.jst.jee.server:servlet_lec26_02_dispatcher_redirect"/><Context docBase="servlet_lec26_01_dispatcher_forwarding" path="/servlet_lec26_01_dispatcher_forwarding" reloadable="true" source="org.eclipse.jst.jee.server:servlet_lec26_01_dispatcher_forwarding"/></Host>
     </Engine>
   </Service>
 </Server>

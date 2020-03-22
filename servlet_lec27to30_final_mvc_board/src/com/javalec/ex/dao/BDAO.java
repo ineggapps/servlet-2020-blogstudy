@@ -197,7 +197,7 @@ public class BDAO {
 		}
 	}
 
-	public BDTO reploy_view(String str) {
+	public BDTO reply_view(String str) {
 		BDTO dto = null;
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;

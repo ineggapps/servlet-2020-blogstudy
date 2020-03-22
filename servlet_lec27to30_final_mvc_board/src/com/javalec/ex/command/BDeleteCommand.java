@@ -5,16 +5,15 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.javalec.ex.dao.BDAO;
 
-public class BWriteCommand implements BCommand{
+public class BDeleteCommand implements BCommand {
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) {
-		String bTitle = request.getParameter("bTitle");
-		String bName = request.getParameter("bName");
-		String bContent = request.getParameter("bContent");
-		
+
+		String bId = request.getParameter("bId");
 		BDAO dao = new BDAO();
-		dao.write(bTitle, bName, bContent);
+		dao.delete(bId);
+
 	}
 
 }

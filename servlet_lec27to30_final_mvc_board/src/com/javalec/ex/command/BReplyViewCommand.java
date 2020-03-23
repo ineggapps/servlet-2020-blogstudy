@@ -12,7 +12,7 @@ public class BReplyViewCommand implements BCommand {
 	public void execute(HttpServletRequest request, HttpServletResponse response) {
 		String bId = request.getParameter("bId");
 		BDAO dao = new BDAO();
-		BDTO dto = dao.reply_view("bId");
+		BDTO dto = dao.reply_view(bId);
 		request.setAttribute("reply_view", dto);
 	}
 

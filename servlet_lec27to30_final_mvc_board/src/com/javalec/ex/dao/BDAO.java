@@ -31,7 +31,7 @@ public class BDAO {
 		try {
 			connection = dataSource.getConnection();
 			String query = "insert into mvc_board(bId,bName, bTitle, bContent, bHit, bGroup, bStep, bIndent) "
-					+ "values (mvcboard_seq.nextVal, ?, ?, ?, 0, mvc_board_seq.currval, 0, 0)";
+					+ "values (mvc_board_seq.nextVal, ?, ?, ?, 0, mvc_board_seq.currval, 0, 0)";
 			preparedStatement = connection.prepareStatement(query);
 			preparedStatement.setString(1, bName);
 			preparedStatement.setString(2, bTitle);
@@ -248,9 +248,11 @@ public class BDAO {
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;
 
+		System.out.println(String.format("%s %s %s %s %s %s %s", bId, bName, bTitle, bContent, bGroup, bStep, bIndent));
 		try {
 			connection = dataSource.getConnection();
-			String query = "insert into mvc_board (bId, bName, bTitle, bContent, bGroup, bStep, bIndent) values ( mvc_board_seq.nextval, ?, ?, ?, ?, ?, ?)";
+			String query = "insert into mvc_board (bId, bName, bTitle, bContent, bGroup, bStep, bIndent) "
+					+ "values ( mvc_board_seq.nextval, ?, ?, ?, ?, ?, ?)";
 			preparedStatement = connection.prepareStatement(query);
 			preparedStatement.setString(1, bName);
 			preparedStatement.setString(2, bTitle);
